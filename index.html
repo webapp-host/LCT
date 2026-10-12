@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Project LCT public information website">
+  <title>Project LCT | Project Information Portal</title>
+  <link rel="preconnect" href="https://cesium.com">
+  <link rel="stylesheet" href="https://cesium.com/downloads/cesiumjs/releases/1.146/Build/Cesium/Widgets/widgets.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://cesium.com/downloads/cesiumjs/releases/1.146/Build/Cesium/Cesium.js" defer></script>
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="site-header" id="top">
+  <div class="nav-wrap">
+    <a class="brand" href="#top" aria-label="Project LCT home">Project LCT</a>
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+    <nav id="primary-nav" aria-label="Primary navigation">
+      <a href="#about">About</a><a href="#schedule">Schedule</a><a href="#explore">Explore</a>
+      <a href="#faq">FAQ</a><a href="#contact">Contact</a><a href="#calendar">Calendar</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+  <section class="hero" aria-labelledby="hero-title">
+    <img class="hero-image" src="images/hero-placeholder.svg" alt="Replace this placeholder with a project site background image">
+    <div class="hero-shade"></div>
+    <div class="hero-panel container">
+      <p class="eyebrow">Project information portal</p>
+      <h1 id="hero-title"><span>Project</span> LCT</h1>
+      <p class="hero-copy">Use this area for a concise project introduction. The text, image, dates and links are placeholders that can be updated as the project advances.</p>
+      <div class="button-row">
+        <a class="button button-light" href="#schedule">Project schedule</a>
+        <a class="button button-outline" href="#explore">Explore the site</a>
+        <a class="button button-outline" href="#faq">FAQ</a>
+        <a class="button button-outline" href="#contact">Contact us</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-light" id="about">
+    <div class="container about-grid">
+      <div><p class="section-kicker">Project overview</p><h2>About the Project</h2><p>Replace this copy with the project purpose, location and current status. The layout is designed for short public-facing explanations and can expand as more information becomes available.</p><p>Add another paragraph here for important context, anticipated benefits or a summary of the public involvement process.</p></div>
+      <aside class="fact-stack" aria-label="Project details">
+        <article class="fact-card"><span>Upcoming date</span><strong>Month 00</strong><p>Placeholder event</p></article>
+        <article class="fact-card"><span>Location</span><strong>Lancaster, Ohio</strong><p>Placeholder address</p></article>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section schedule-section" id="schedule">
+    <div class="container"><p class="section-kicker">Anticipated timeline</p><h2>Construction Schedule</h2><p class="section-intro">Dates below are placeholders. Update the phase names and date ranges in <code>index.html</code>.</p>
+      <div class="timeline" aria-label="Construction schedule">
+        <article><span>01</span><h3>Planning and Design</h3><p>Placeholder dates</p></article>
+        <article><span>02</span><h3>Site Preparation</h3><p>Placeholder dates</p></article>
+        <article><span>03</span><h3>Construction</h3><p>Placeholder dates</p></article>
+        <article><span>04</span><h3>Project Completion</h3><p>Placeholder dates</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section explore-section" id="explore">
+    <div class="container"><p class="section-kicker">Interactive experience</p><h2>Explore the Site</h2><p class="section-intro">Select a location in the list or a yellow map pin. The 3D globe will fly to the location and load its associated video information.</p>
+      <div class="explore-grid">
+        <div class="location-panel"><h3>Rendering Locations</h3><p>Coordinates and video files are edited in <code>js/script.js</code>.</p><div id="location-list" class="location-list"></div></div>
+        <div class="viewer-wrap"><div id="cesiumContainer" role="application" aria-label="Interactive 3D site viewer"></div><div id="map-status" class="map-status" role="status">Loading the 3D viewer…</div></div>
+      </div>
+      <article class="video-panel" id="video-panel">
+        <div><p class="section-kicker">Selected viewpoint</p><h3 id="video-title">Location 1</h3><p id="video-description">Select a location to preview its project rendering or video.</p></div>
+        <div class="video-frame"><video id="location-video" controls preload="metadata" poster="images/video-placeholder.svg"><source id="video-source" src="videos/location-1.mp4" type="video/mp4">Your browser does not support HTML video.</video><p id="video-note">Placeholder: add an MP4 with the matching file name to the <code>videos</code> folder.</p></div>
+      </article>
+      <p class="technical-note">This prototype uses CesiumJS with OpenStreetMap imagery and does not require ArcGIS. It needs an internet connection to load the globe library and basemap.</p>
+    </div>
+  </section>
+
+  <section class="section faq-section" id="faq">
+    <div class="container narrow"><p class="section-kicker">Project information</p><h2>Frequently Asked Questions</h2><p class="section-intro">Replace the sample questions and answers as project information is finalized.</p>
+      <div class="accordion">
+        <details open><summary>What has been announced?</summary><div><p>Placeholder answer. Use this space for a clear, concise project summary.</p></div></details>
+        <details><summary>What is the proposed project schedule?</summary><div><p>Placeholder answer describing major milestones and anticipated dates.</p></div></details>
+        <details><summary>How will the project support the local community?</summary><div><p>Placeholder answer describing community benefits, local coordination or other commitments.</p></div></details>
+        <details><summary>How can I receive project updates?</summary><div><p>Placeholder answer with instructions for email updates, meetings or other communications.</p></div></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="section contact-section" id="contact">
+    <div class="container contact-grid"><div><p class="section-kicker">Stay connected</p><h2>Contact Us</h2><p>Use this form as a visual placeholder. Before publishing, connect it to a form service or your organization’s approved submission endpoint.</p></div>
+      <form id="contact-form"><div class="form-row"><label>First name <span aria-hidden="true">*</span><input name="firstName" required></label><label>Last name <span aria-hidden="true">*</span><input name="lastName" required></label></div><label>Email address <span aria-hidden="true">*</span><input type="email" name="email" required></label><label>Message <span aria-hidden="true">*</span><textarea name="message" maxlength="1000" required></textarea></label><div class="form-actions"><span id="form-status" role="status"></span><button class="button button-navy" type="submit">Submit</button></div></form>
+    </div>
+  </section>
+
+  <section class="section careers-section" id="careers">
+    <div class="container"><p class="section-kicker">Local opportunities</p><h2>Career Opportunities</h2><p class="section-intro">Use this section for project-related hiring information, workforce partnerships and links to current openings.</p>
+      <article class="career-card"><h3>What This Project Means for Jobs</h3><ul><li>Placeholder construction and skilled-trade opportunity.</li><li>Placeholder permanent operations opportunity.</li><li>Placeholder local vendor and service opportunity.</li></ul></article>
+      <article class="career-card"><h3>Local Hiring Categories</h3><div class="job-grid"><span>Maintenance</span><span>Security</span><span>Landscaping</span><span>HVAC Repair</span><span>Electrical Work</span><span>Construction Trades</span></div><a class="text-link" href="#careers">Placeholder careers link →</a></article>
+    </div>
+  </section>
+
+  <section class="section calendar-section" id="calendar">
+    <div class="container"><p class="section-kicker">Important dates</p><h2>Project Calendar</h2><div class="calendar-controls"><button id="previous-month" type="button" aria-label="Previous month">←</button><h3 id="calendar-heading"></h3><button id="next-month" type="button" aria-label="Next month">→</button></div><div class="calendar-scroll"><div class="calendar" id="calendar-grid" aria-labelledby="calendar-heading"></div></div>
+      <div class="upcoming"><h3>Upcoming Events</h3><div id="event-list"></div></div>
+    </div>
+  </section>
+
+  <section class="section downloads-section" id="downloads">
+    <div class="container"><p class="section-kicker">Project library</p><h2>Project Downloads</h2><div class="download-grid">
+      <article><h3>3D Renderings</h3><p>Project renderings and visualizations.</p><a class="button button-gold" href="documents/README.md" download>Download placeholder</a></article>
+      <article><h3>Construction Routing Map</h3><p>Anticipated access and routing information.</p><a class="button button-gold" href="documents/README.md" download>Download placeholder</a></article>
+      <article><h3>Project Phasing</h3><p>Sequential phases of the proposed project.</p><a class="button button-gold" href="documents/README.md" download>Download placeholder</a></article>
+    </div></div>
+  </section>
+</main>
+<footer><div class="container footer-wrap"><p>© <span id="year"></span> Project LCT. Placeholder footer text.</p><a href="#top">Return to top ↑</a></div></footer>
+</body>
+</html>
